@@ -40,9 +40,21 @@
       margin-bottom: 12px;
       background: #fff;
     }
-    .banner h1 { font-size: 36px; margin: 0; }
-    .banner p { font-size: 18px; margin: 8px 0 0; opacity: 0.95; }
-    .cta { margin-top: 12px; display: inline-flex; gap: 10px; flex-wrap: wrap; }
+    .banner h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .banner p {
+      font-size: 18px;
+      margin: 8px 0 0;
+      opacity: 0.95;
+    }
+    .cta {
+      margin-top: 12px;
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
     .cta a {
       display: inline-block;
       padding: 8px 14px;
@@ -51,10 +63,24 @@
       color: #fff;
       text-decoration: none;
       backdrop-filter: blur(2px);
+      transition: all 0.2s ease;
     }
-    .wrap { max-width: var(--max); margin: -40px auto 0; padding: 0 20px 40px; }
-    .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
-    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .cta a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: -40px auto 0;
+      padding: 0 20px 40px;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -74,24 +100,27 @@
       font-weight: 500;
       transition: all 0.2s ease;
     }
-    .btn:hover { background: var(--accent); color: #fff; }
-    .contact {
-      margin-top: 28px; text-align: center; color: var(--muted); font-size: 14px;
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
     }
-    footer { text-align: center; margin-top: 26px; color: var(--muted); font-size: 13px; }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
   <section class="banner">
-    <!-- Use the filename you uploaded -->
+    <!-- Profile picture (make sure this matches your uploaded file name) -->
     <img src="./Nora_Perotti_pic.png" alt="Nora Perotti" class="profile-pic">
     <h1>Nora Perotti</h1>
     <p>Analytics & BI — Tableau • Power BI • SQL • Python</p>
     <div class="cta">
       <a href="https://github.com/nperotti3" target="_blank">GitHub</a>
       <a href="https://public.tableau.com/app/profile/nora.perotti" target="_blank">Tableau Public</a>
-      <!-- Resume download button -->
-      <a href="./Nora_Perotti_Resume_2025.pdf" target="_blank">Download Résumé (PDF)</a>
     </div>
   </section>
 
@@ -135,14 +164,10 @@
       </article>
     </section>
 
-    <div class="contact">
-      For opportunities: <strong>nperotti3</strong> (GitHub) • Tableau Public: <strong>nora.perotti</strong>
-      <!-- Add LinkedIn link if you want: <a href="https://www.linkedin.com/in/your-handle" target="_blank">LinkedIn</a> -->
-    </div>
-
     <footer>
       <p>© 2025 Nora Perotti — Portfolio</p>
     </footer>
   </div>
 </body>
 </html>
+
