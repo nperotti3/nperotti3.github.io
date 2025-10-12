@@ -5,112 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nora Perotti — Analytics & BI Portfolio</title>
   <style>
-    :root {
-      --bg: #f8fafc;
-      --ink: #0f172a;
-      --muted: #475569;
-      --card: #ffffff;
-      --line: #e5e7eb;
-      --accent: #6366f1;
-      --max: 1100px;
+    :root{
+      --bg:#f8fafc; --ink:#0f172a; --muted:#475569;
+      --card:#ffffff; --line:#e5e7eb; --accent:#6366f1; --max:1100px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    .banner{
+      background:linear-gradient(120deg,#6366f1,#a855f7,#ec4899);
+      color:#fff;padding:60px 20px 80px;text-align:center;
+      border-bottom-left-radius:40px;border-bottom-right-radius:40px;
+      box-shadow:0 2px 8px rgba(0,0,0,.15);
     }
-    .banner {
-      background: linear-gradient(120deg, #6366f1, #a855f7, #ec4899);
-      color: #fff;
-      padding: 60px 20px 80px;
-      text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    .profile-pic{
+      width:160px;height:160px;border-radius:50%;object-fit:cover;
+      border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.25);margin-bottom:16px;background:#fff;
     }
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,.25);
-      margin-bottom: 16px;
-      background: #fff;
-    }
-    .banner h1 {
-      font-size: 38px;
-      margin: 8px 0 6px;
-    }
-    .banner p {
-      font-size: 18px;
-      margin: 6px 0;
-      opacity: 0.95;
-    }
-    .cta {
-      margin-top: 14px;
-      display: inline-flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 9px 16px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.75);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      backdrop-filter: blur(3px);
-      transition: all 0.2s ease;
-    }
-    .cta a:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    .wrap {
-      max-width: var(--max);
-      margin: -50px auto 0;
-      padding: 0 20px 40px;
-    }
-    .grid {
-      display: grid;
-      gap: 22px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 900px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.06);
-    }
-    .card h2 { margin: 4px 0 6px; font-size: 20px; color: var(--ink); }
-    .meta { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .btn {
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-    .btn:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: var(--muted);
-      font-size: 13px;
-    }
+    .banner h1{font-size:38px;margin:8px 0 6px}
+    .banner p{font-size:18px;margin:6px 0;opacity:.95}
+    .cta{margin-top:14px;display:inline-flex;gap:12px;flex-wrap:wrap}
+    .cta a{display:inline-block;padding:9px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.75);color:#fff;text-decoration:none;font-weight:500;backdrop-filter:blur(3px);transition:.2s}
+    .cta a:hover{background-color:rgba(255,255,255,.2)}
+
+    .wrap{max-width:var(--max);margin:-50px auto 0;padding:0 20px 40px}
+    .grid{display:grid;gap:22px;grid-template-columns:1fr}
+    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .card h2{margin:4px 0 6px;font-size:20px;color:var(--ink)}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .btn{text-decoration:none;padding:8px 14px;border-radius:8px;border:1px solid var(--accent);color:var(--accent);font-weight:500;transition:.2s}
+    .btn:hover{background:var(--accent);color:#fff}
+    .card img{width:100%;height:auto;max-height:320px;object-fit:cover;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0}
+
+    footer{text-align:center;margin-top:50px;color:var(--muted);font-size:13px}
   </style>
 </head>
 <body>
@@ -124,70 +53,44 @@
     </div>
   </section>
 
-    <!-- Tableau: Superstore Dashboard -->
+  <!-- ✅ WRAPPER + GRID restored -->
+  <div class="wrap">
+    <section class="grid">
 
-        <article class="card">
-          <h2>Superstore Tableau Dashboard</h2>
-          <p class="meta">Interactive trends, category drilldowns • Tableau</p>
-        
-          <!-- Preview image (use the exact filename you uploaded) -->
-          <img src="./Superstore_Preview.png" 
-            alt="Superstore Tableau Dashboard Preview"
-            style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;"
-            >
-        
-          <div class="actions">
-            <a class="btn" href="https://github.com/nperotti3/Tableau-Dashboard_Superstore" target="_blank">Source repo</a>
-            <a class="btn" href="https://public.tableau.com/app/profile/nora.perotti/viz/Dashboard_lineandbarchartNoraPerotti/Dashboard1" target="_blank">Open on Tableau Public</a>
-          </div>
-        </article>
+      <!-- Tableau: Superstore -->
+      <article class="card">
+        <h2>Superstore Tableau Dashboard</h2>
+        <p class="meta">Interactive trends, category drilldowns • Tableau</p>
+        <img src="./Superstore_Preview.png" alt="Superstore Tableau Dashboard Preview">
+        <div class="actions">
+          <a class="btn" href="https://github.com/nperotti3/Tableau-Dashboard_Superstore" target="_blank">Source repo</a>
+          <a class="btn" href="https://public.tableau.com/app/profile/nora.perotti/viz/Dashboard_lineandbarchartNoraPerotti/Dashboard1" target="_blank">Open on Tableau Public</a>
+        </div>
+      </article>
 
+      <!-- Tableau: International Tourism -->
+      <article class="card">
+        <h2>Tableau — International Tourism</h2>
+        <p class="meta">Tourism income by region & country (2001–2012) • stacked bars + treemap</p>
+        <img src="./tourism.png" alt="International Tourism Dashboard">
+        <div class="actions">
+          <a class="btn" href="https://public.tableau.com/app/profile/nora.perotti/viz/WorldIndicators_Tableu_NoraPerotti/Tourism" target="_blank">Open on Tableau Public</a>
+          <a class="btn" href="https://github.com/nperotti3/tableau-tourism-dashboard" target="_blank">Source Repo</a>
+        </div>
+      </article>
 
+      <!-- Tableau: Ease of Business -->
+      <article class="card">
+        <h2>Tableau — Ease of Business</h2>
+        <p class="meta">GDP per capita vs. ease-of-business index • correlations & outliers</p>
+        <img src="./EaseOfBusiness_Preview.png" alt="Ease of Business Dashboard Preview">
+        <div class="actions">
+          <a class="btn" href="https://public.tableau.com/app/profile/nora.perotti/viz/BizIndex_Tableu_NoraPerotti/Business" target="_blank">Open on Tableau Public</a>
+          <a class="btn" href="https://github.com/nperotti3/Tableau-EaseOfBusiness_Dashboard" target="_blank">Source Repo</a>
+        </div>
+      </article>
 
-
-        <article class="card">
-          <h2>Tableau — International Tourism</h2>
-          <p class="meta">Tourism income by region & country (2001–2012) • stacked bars + treemap</p>
-          <img src="./tourism.png" alt="International Tourism Dashboard" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;">
-          <div class="actions">
-            <a class="btn" href="https://public.tableau.com/app/profile/nora.perotti/viz/WorldIndicators_Tableu_NoraPerotti/Tourism" target="_blank">Open on Tableau Public</a>
-            <a class="btn" href="https://github.com/nperotti3/tableau-tourism-dashboard" target="_blank">Source Repo</a>
-          </div>
-        </article>
-  
-        <!-- Tableau: Ease of Business -->
-        <article class="card">
-          <h2>Tableau — Ease of Business</h2>
-          <p class="meta">
-            GDP per capita vs. ease-of-business index • correlations & outliers
-          </p>
-        
-          <!-- Updated preview image -->
-          <img
-            src="./EaseOfBusiness_Preview.png"
-            alt="Ease of Business Dashboard Preview"
-            style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;"
-          >
-        
-          <div class="actions">
-            <a
-              class="btn"
-              href="https://public.tableau.com/app/profile/nora.perotti/viz/BizIndex_Tableu_NoraPerotti/Business"
-              target="_blank"
-            >
-              Open on Tableau Public
-            </a>
-            <a
-              class="btn"
-              href="https://github.com/nperotti3/Tableau-EaseOfBusiness_Dashboard"
-              target="_blank"
-            >
-              Source Repo
-            </a>
-          </div>
-        </article>
-
-
+      <!-- Sidel -->
       <article class="card">
         <h2>Sidel Supply Chain Analytics</h2>
         <p class="meta">Ops/Inventory dashboards & process automation • GitHub Pages</p>
@@ -196,89 +99,55 @@
         </div>
       </article>
 
-
+      <!-- Power BI -->
       <article class="card">
         <h2>Power BI — Sales Dashboard</h2>
         <p class="meta">KPI overview, regional sales trends, and profitability analysis • Power BI</p>
-        <img src="./sales_dashboard.png" alt="Sales Dashboard" style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;">
+        <img src="./sales_dashboard.png" alt="Sales Dashboard">
         <div class="actions">
           <a class="btn" href="https://github.com/nperotti3/PowerBI-Sales-Dashboard" target="_blank">Source repo</a>
           <a class="btn" href="./Sales_Dashboard.pdf" target="_blank">View PDF</a>
         </div>
       </article>
 
-      <!-- D3: Force-Directed Graph — Board Game Network -->
+      <!-- D3 Force-Directed Graph -->
       <article class="card">
         <h2>🎮 D3 Force-Directed Graph — Board Game Network</h2>
-        <p class="meta">
-          Interactive D3.js force layout with drag & pin, zoom/pan, degree-based node sizing,
-          color by category, and hover tooltips.
-        </p>
-      
-        <!-- Upload this image to the same folder as index.html -->
-        <img
-          src="./Network_Graph_Preview.png"
-          alt="Board game network graph preview"
-          style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:10px 0;box-shadow:0 2px 6px rgba(0,0,0,.08);"
-        >
-      
+        <p class="meta">Interactive D3.js force layout with drag & pin, zoom/pan, degree-based node sizing, color by category, and hover tooltips.</p>
+        <img src="./Network_Graph_Preview.png" alt="Board game network graph preview">
         <div class="actions">
           <a class="btn" href="https://nperotti3.github.io/Network_Graph/Q2.html" target="_blank">View Live Demo</a>
           <a class="btn" href="https://github.com/nperotti3/Network_Graph" target="_blank">Source Repo</a>
         </div>
       </article>
 
-
-
-      
+      <!-- D3 Line Charts (2016–2020) -->
       <article class="card">
         <h2>🎮 D3 Line Charts — Board Game Ratings (2016–2020)</h2>
-        <p class="meta">
-          Interactive visualization built with <strong>D3.js v5</strong> for a
-          <strong>Data and Visualization project</strong>. Highlights board game popularity
-          and rankings with linear, √, and log scales.
-        </p>
-      
-        <!-- Preview image -->
-        <img
-          src="./D3_LineCharts_Preview.png"
-          alt="D3 Line Chart Preview — Board Game Ratings Visualization"
-          style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;"
-        />
-      
+        <p class="meta">Interactive visualization built with <strong>D3.js v5</strong> for a <strong>Data and Visualization project</strong>. Highlights board game popularity and rankings with linear, √, and log scales.</p>
+        <img src="./D3_LineCharts_Preview.png" alt="D3 Line Chart Preview — Board Game Ratings Visualization">
         <div class="actions">
           <a class="btn" href="https://github.com/nperotti3/D3-LineChart" target="_blank">Source Repo</a>
           <a class="btn" href="https://nperotti3.github.io/D3-LineChart/Q3.html" target="_blank">View Live Demo</a>
         </div>
       </article>
 
-       <article class="card">
-          <h2>🎲 D3 Line Charts — Board Game Ratings (2015–2019)</h2>
-          <p class="meta">
-            Interactive D3.js v5 visualization built for a <strong>Project</strong>. This project explores
-            <strong>board game popularity</strong> and <strong>user ratings</strong> from 2015–2019 using
-            dynamic line and bar charts built entirely in D3.
-          </p>
-      
-        <!-- Preview image -->
-        <img
-          src="./BoardGameRatings_Preview.png"
-          alt="Board Game Ratings D3 Line Chart Preview"
-          style="width:100%;border-radius:10px;border:1px solid #e5e7eb;margin:8px 0;"
-        />
-     
-          
-  <div class="buttons">
-    <a href="https://nperotti3.github.io/D3_board_games/Q4.html" target="_blank" class="btn">View Live Demo</a>
-    <a href="https://github.com/nperotti3/D3_board_games" target="_blank" class="btn">Source Repo</a>
-    
-  </div>
-</article>
+      <!-- D3 Line Charts (2015–2019) -->
+      <article class="card">
+        <h2>🎲 D3 Line Charts — Board Game Ratings (2015–2019)</h2>
+        <p class="meta">Interactive D3.js v5 visualization built for a <strong>Project</strong>. This project explores <strong>board game popularity</strong> and <strong>user ratings</strong> from 2015–2019 using dynamic line and bar charts built entirely in D3.</p>
+        <img src="./BoardGameRatings_Preview.png" alt="Board Game Ratings D3 Line Chart Preview">
+        <div class="actions">
+          <a class="btn" href="https://nperotti3.github.io/D3_board_games/Q4.html" target="_blank">View Live Demo</a>
+          <a class="btn" href="https://github.com/nperotti3/D3_board_games" target="_blank">Source Repo</a>
+        </div>
+      </article>
 
+    </section>
 
     <footer>
       <p>© 2025 Nora Perotti — Portfolio</p>
     </footer>
-  </div>
+  </div> <!-- /wrap -->
 </body>
 </html>
